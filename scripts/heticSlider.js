@@ -28,11 +28,34 @@ class HeticSlider{
         this.arrowLeft.classList.add("arrowLeft")
         this.arrowLeft.setAttribute("href", "#")
         this.container.appendChild(this.arrowLeft)
+        let _this = this
+        this.arrowLeft.addEventListener(
+          "click",
+          function(e)
+          {
+            e.preventDefault()
+            _this.currentSlide--
+            _this.move()
+          }
+        )
 
         this.arrowRight= document.createElement("a")
         this.arrowRight.classList.add("arrowRight")
         this.arrowRight.setAttribute("href", "#")
         this.container.appendChild(this.arrowRight)
+        this.arrowRight.addEventListener(
+          "click",
+          function(e)
+          {
+            e.preventDefault()
+            _this.currentSlide++
+            _this.move()
+          }
+        )
     }
+  }
+
+  move(){
+    console.log("Ca marche")
   }
 }
