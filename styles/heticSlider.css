@@ -1,0 +1,14 @@
+.heticSlider{
+  width:960px;
+  margin:0 auto;
+  position:relative;
+}
+
+.heticSlider .containerSlider{
+  display:flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+.heticSlider .containerSlider img{
+  height: 400px;
+}
